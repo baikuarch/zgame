@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package="/msg";
+
+// message id enum
+enum MsgIDEnum {
+  EXT = 0;
+  LOGIN_REQ = 1;
+  LOGIN_RESULT = 2;
+};
+
+// proto message
+message LoginReq {
+  string name = 1;
+  string password = 2;
+}
+message LoginRsp {
+  string name = 1;
+}
